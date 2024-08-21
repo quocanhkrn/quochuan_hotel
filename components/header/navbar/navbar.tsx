@@ -13,7 +13,7 @@ const Navbar = ({
     <nav
       className={`container flex items-center justify-between transition-all`}
     >
-      <Link className="block h-10" href="/">
+      <Link className="block h-8 sm:h-10" href="/">
         <Logo
           colorClassName={
             theme === "homepage" ? "fill-white" : "fill-dark-blue"
@@ -22,7 +22,7 @@ const Navbar = ({
       </Link>
 
       <Button
-        className={`border-dark-blue bg-dark-blue text-white hover:bg-transparent hover:${theme === "homepage" ? "text-white" : "text-dark-blue"} hover:${theme === "homepage" && "border-white"}`}
+        className={`border-dark-blue bg-dark-blue text-white hover:bg-transparent hover:${theme === "homepage" ? "text-white" : "text-dark-blue"} ${theme === "homepage" && "hover:border-white"}`}
       >
         <Link href="tel:+842613597598">ĐẶT PHÒNG NGAY</Link>
       </Button>

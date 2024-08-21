@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { getAllImages } from "../../../lib/apis";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, FreeMode } from "swiper/modules";
 
 const Events = (): JSX.Element => {
   const [imagePaths, setImagePaths] = useState<string[] | undefined>();
@@ -21,12 +21,13 @@ const Events = (): JSX.Element => {
     <section className="py-16">
       <Title />
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, FreeMode]}
         spaceBetween={20}
         slidesPerView={"auto"}
         loop
         speed={2000}
-        autoplay={{ delay: 1000 }}
+        freeMode
+        autoplay={{ delay: 500 }}
         className="mt-5 h-96"
       >
         {imagePaths?.map((image) => (

@@ -1,8 +1,8 @@
 import { fahkwang400 } from "@/components/ui/fonts";
 
-const Text = () => {
+const Text = (): JSX.Element => {
   return (
-    <div className="container px-[10%] pt-28 text-center sm:pt-36 md:px-[5%] lg:text-left">
+    <div className="container mt-28 px-[10%] text-center md:px-[5%] lg:mt-36 lg:text-left">
       <h1
         className={`${fahkwang400.className} mb-5 text-[2.5rem] text-yellow md:text-[3rem] lg:w-5/6 lg:text-[5rem] xl:w-2/3 2xl:w-1/2`}
       >

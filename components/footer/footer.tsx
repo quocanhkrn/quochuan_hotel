@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <section className="flex flex-col justify-center gap-5 bg-dark-blue pt-10 text-white lg:flex-row lg:flex-wrap">
       <div className="container lg:w-fit lg:px-10">
@@ -61,7 +61,8 @@ const Footer = () => {
         ></iframe>
       </div>
       <p className="w-full bg-white py-3 text-center text-dark-blue">
-        Copyright &copy; 2024 Quoc Huan Group. All right reserved.
+        Copyright &copy; {new Date().getFullYear()} Quoc Huan Group. All right
+        reserved.
       </p>
     </section>
   );

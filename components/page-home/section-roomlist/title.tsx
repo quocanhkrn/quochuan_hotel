@@ -1,6 +1,6 @@
 import { fahkwang500 } from "@/components/ui/fonts";
 
-const Title = () => {
+const Title = (): JSX.Element => {
   return (
     <div className="container">
       <h1

@@ -6,6 +6,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  important: true,
   theme: {
     container: {
       center: true,
@@ -20,7 +21,7 @@ const config: Config = {
         yellow: "#ffd400",
       },
       fontFamily: {
-        sans: ["var(--font-raleway)"],
+        sans: ["var(--font-roboto)"],
       },
     },
   },

@@ -1,11 +1,7 @@
 import Logomark from "./logomark";
 import Logotype from "./logotype";
 
-type LogoProps = {
-  colorClassName?: string;
-};
-
-const Logo = ({ colorClassName }: LogoProps) => {
+const Logo = ({ colorClassName }: { colorClassName: string }) => {
   return (
     <div className={`flex h-full gap-3 ${colorClassName}`}>
       <Logomark />

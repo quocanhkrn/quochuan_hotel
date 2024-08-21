@@ -27,3 +27,9 @@ html {
 button {
   white-space: nowrap;
 }
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 2rem !important;
+  color: white;
+}

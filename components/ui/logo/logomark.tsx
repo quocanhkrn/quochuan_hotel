@@ -1,4 +1,4 @@
-const Logomark = (props: any) => (
+const Logomark = (props: any): JSX.Element => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 2"

@@ -1,13 +1,14 @@
-import { Raleway } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
+import { Roboto } from "next/font/google";
+import "@/app/globals.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-const raleway = Raleway({
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: "variable",
+  weight: "400",
   display: "swap",
-  variable: "--font-raleway",
+  variable: "--font-roboto",
 });
 
 export default function RootLayout({
@@ -16,12 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${raleway.variable}`}>
-      <body className="font-sans">
-        <Header />
-        {children}
-        <Footer />
-      </body>
+    <html lang="en" className={`${roboto.variable}`}>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

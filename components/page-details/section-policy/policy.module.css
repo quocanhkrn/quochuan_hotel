@@ -1,0 +1,11 @@
+.policy {
+  line-height: 2;
+}
+
+.policy ol {
+  list-style: decimal;
+}
+
+.policy ul {
+  list-style-type: "- ";
+}

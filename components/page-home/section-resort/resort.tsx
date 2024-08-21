@@ -7,7 +7,7 @@ import cover from "@/public/images/resort/cover.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
-const Resort = () => {
+const Resort = (): JSX.Element => {
   return (
     <section
       className={`${classname.resort} relative text-white before:bg-dark-blue before:bg-opacity-60 md:before:bg-opacity-0`}

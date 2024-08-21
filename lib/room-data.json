@@ -1,46 +1,54 @@
 [
   {
+    "id": "standard_single",
     "name": ["Phòng cao cấp", "Standard Single"],
     "area": 20,
     "bed": "01 Giường King",
     "price": {
-      "hourly": { "anHour": 150000, "step": 30000 },
+      "hour": 150000,
+      "hourStep": 30000,
       "night": 300000,
       "day": 350000
     },
-    "cover": "/images/rooms/standard_single_cover.jpg"
+    "cover": "standard_single_cover.jpg"
   },
   {
+    "id": "premium_single",
     "name": ["Phòng VIP", "Premium Single"],
     "area": 20,
     "bed": "01 Giường King",
     "price": {
-      "hourly": { "anHour": 170000, "step": 30000 },
+      "hour": 170000,
+      "hourStep": 30000,
       "night": 350000,
       "day": 400000
     },
-    "cover": "/images/rooms/premium_single_cover.jpg"
+    "cover": "premium_single_cover.jpg"
   },
   {
+    "id": "standard_double",
     "name": ["Phòng đôi nhỏ", "Standard Double"],
     "area": 30,
     "bed": "02 Giường Twin",
     "price": {
-      "hourly": { "anHour": 150000, "step": 30000 },
+      "hour": 150000,
+      "hourStep": 30000,
       "night": 350000,
       "day": 400000
     },
-    "cover": "/images/rooms/standard_double_cover.jpg"
+    "cover": "standard_double_cover.jpg"
   },
   {
+    "id": "family_double",
     "name": ["Phòng đôi lớn", "Family Double"],
     "area": 50,
     "bed": "02 Giường Queen",
     "price": {
-      "hourly": { "anHour": 200000, "step": 40000 },
+      "hour": 200000,
+      "hourStep": 40000,
       "night": 450000,
       "day": 550000
     },
-    "cover": "/images/rooms/family_double_cover.jpg"
+    "cover": "family_double_cover.jpg"
   }
 ]

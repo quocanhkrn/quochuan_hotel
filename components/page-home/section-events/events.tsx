@@ -1,29 +1,18 @@
 "use client";
 
 import Title from "./title";
-import Slider, { Settings } from "react-slick";
 import { useEffect, useState } from "react";
 import { getAllImages } from "../../../lib/apis";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import { Autoplay } from "swiper/modules";
 
-const Events = () => {
-  const settings: Settings = {
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    arrows: false,
-    infinite: true,
-    variableWidth: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    centerMode: true,
-    speed: 2000,
-    adaptiveHeight: true,
-  };
-
+const Events = (): JSX.Element => {
   const [imagePaths, setImagePaths] = useState<string[] | undefined>();
 
   useEffect(() => {
-    const getImagePaths = async () => {
-      getAllImages("events").then((res) => setImagePaths(res));
+    const getImagePaths = async (): Promise<void> => {
+      getAllImages("events").then((res: string[]) => setImagePaths(res));
     };
     getImagePaths();
   }, []);
@@ -31,17 +20,26 @@ const Events = () => {
   return (
     <section className="py-16">
       <Title />
-      <Slider {...settings} className="mt-10">
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={20}
+        slidesPerView={"auto"}
+        loop
+        speed={2000}
+        autoplay={{ delay: 1000 }}
+        className="mt-5 h-96"
+      >
         {imagePaths?.map((image) => (
-          <div key={image} className="mx-2 h-96">
-            <img
-              className="h-full object-contain"
+          <SwiperSlide key={image} className="relative w-fit">
+            <Image
+              className="relative"
               src={`/images/events/${image}`}
               alt={image}
+              fill
             />
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </section>
   );
 };

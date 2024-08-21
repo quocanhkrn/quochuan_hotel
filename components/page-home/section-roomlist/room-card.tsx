@@ -1,5 +1,4 @@
 import Image from "next/image";
-import roomImg from "@/public/images/rooms/room.jpg";
 import { fahkwang500 } from "@/components/ui/fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,11 +12,16 @@ import Link from "next/link";
 import Button from "@/components/ui/button/button";
 import { Room } from "@/lib/types";
 
-const RoomCard = ({ area, bed, cover, name, price }: Room) => {
+const RoomCard = ({ id, area, bed, cover, name, price }: Room): JSX.Element => {
   return (
     <div className="mx-5 flex max-w-screen-sm flex-col bg-white text-dark-blue xl:max-w-screen-lg xl:flex-row">
       <div className="relative aspect-video flex-grow lg:min-w-[500px]">
-        <Image className="object-cover" src={cover} alt={name[1]} fill />
+        <Image
+          className="object-cover"
+          src={`/images/rooms/${id}/${id}_cover.jpg`}
+          alt={name[1]}
+          fill
+        />
       </div>
       <div className="container w-fit px-10 py-7 xl:flex xl:flex-col">
         <h1 className={`${fahkwang500.className} text-2xl uppercase text-blue`}>
@@ -70,7 +74,11 @@ const RoomCard = ({ area, bed, cover, name, price }: Room) => {
             </p>
           </div>
           <Button className="border-dark-blue bg-dark-blue text-white hover:bg-transparent hover:text-dark-blue">
-            <Link href="#">Xem chi tiết</Link>
+            <Link
+              href={`/details/${name[1].toLowerCase().split(" ").join("_")}`}
+            >
+              Xem chi tiết
+            </Link>
           </Button>
         </div>
       </div>

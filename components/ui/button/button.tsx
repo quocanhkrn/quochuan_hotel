@@ -1,8 +1,8 @@
 import { PropsWithChildren } from "react";
 
 const Button = ({
-  children,
   className,
+  children,
 }: PropsWithChildren<{ className: string }>) => {
   return (
     <button

@@ -8,17 +8,15 @@ export const metadata: Metadata = {
   title: "QUỐC HUẤN HOTEL | THE BEGINNING OF AMAZING JOURNEYS",
 };
 
-const Home = () => {
+const Homepage = (): JSX.Element => {
   return (
     <>
-      <main>
-        <Hero />
-        <RoomList />
-        <Events />
-        <Resort />
-      </main>
+      <Hero />
+      <RoomList />
+      <Events />
+      <Resort />
     </>
   );
 };
 
-export default Home;
+export default Homepage;

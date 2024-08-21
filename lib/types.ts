@@ -1,9 +1,11 @@
 export type Room = {
+  id: string;
   name: string[];
   area: number;
   bed: string;
   price: {
-    hourly: { anHour: number; step: number };
+    hour: number;
+    hourStep: number;
     night: number;
     day: number;
   };

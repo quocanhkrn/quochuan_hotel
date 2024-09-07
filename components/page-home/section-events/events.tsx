@@ -36,6 +36,7 @@ const Events = (): JSX.Element => {
               className="relative"
               src={`/images/events/${image}`}
               alt={image}
+              quality={50}
               fill
             />
           </SwiperSlide>

@@ -12,6 +12,8 @@ const Hero = (): JSX.Element => {
         className={`${classes["cover-img"]} -z-10 scale-125 object-cover object-bottom lg:scale-100`}
         src={coverImg}
         alt="Cover image"
+        placeholder="blur"
+        priority
         fill
       />
       <Text />

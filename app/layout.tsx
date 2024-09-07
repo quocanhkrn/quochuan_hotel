@@ -3,6 +3,7 @@ import "@/app/globals.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Metadata } from "next";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,6 +11,10 @@ const roboto = Roboto({
   display: "swap",
   variable: "--font-roboto",
 });
+
+export const metadata: Metadata = {
+  title: "QUỐC HUẤN HOTEL | THE BEGINNING OF AMAZING JOURNEYS",
+};
 
 export default function RootLayout({
   children,

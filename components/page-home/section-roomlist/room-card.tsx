@@ -20,6 +20,8 @@ const RoomCard = ({ id, area, bed, cover, name, price }: Room): JSX.Element => {
           className="object-cover"
           src={`/images/rooms/${id}/${id}_cover.jpg`}
           alt={name[1]}
+          quality={50}
+          priority
           fill
         />
       </div>
